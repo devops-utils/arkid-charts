@@ -90,6 +90,8 @@ services:
       - "8075:80"
     depends_on:
       - ldap
+    networks:
+      - arkid
 
 networks:
   arkid:

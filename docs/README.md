@@ -4,6 +4,7 @@ sudo docker-compose down
 
 sudo docker-compose up phpldapadmin
 sudo docker-compose up -d phpldapadmin
+sudo docker-compose stop phpldapadmin
 
 docker exec -it arkid-ldap bash
 cat /etc/openldap/slapd.conf
