@@ -16,7 +16,8 @@ cat /etc/openldap/slapd.conf
 sudo docker exec -it arkid-be bash
 pip3 install supervisor
 ps -ef
- 
+supervisord
+
 sudo docker-compose logs -f
 sudo docker-compose logs -f be
 
