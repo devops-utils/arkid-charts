@@ -80,6 +80,17 @@ services:
     networks:
       - arkid
 
+  phpldapadmin:
+    image: osixia/phpldapadmin:latest
+    container_name: phpldapadmin
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: "ldap"
+      PHPLDAPADMIN_HTTPS: "false"
+    ports:
+      - "8075:80"
+    depends_on:
+      - ldap
+
 networks:
   arkid:
     name: ${INSTANCE}
