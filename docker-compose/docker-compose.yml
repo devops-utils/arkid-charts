@@ -16,12 +16,15 @@ services:
       - ${WORKSPACE}/portal.conf:/etc/nginx/conf.d/default.conf
 
   be:
-    image: longguikeji/arkid:v2dev
+    #image: longguikeji/arkid:v2dev
+    build:
+      context: arkid-be
+      dockerfile: Dockerfile
     container_name: ${INSTANCE}-be
     sysctls:
       - net.core.somaxconn=65535
     restart: always
-    # command: /bin/bash -c "pip3 install supervisor && supervisord"
+    command: /bin/bash -c "pip3 install supervisor && supervisord"
     environment:
       - MYSQL_HOST=${INSTANCE}-db
       - MYSQL_PORT=3306
