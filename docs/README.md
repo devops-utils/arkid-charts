@@ -9,7 +9,7 @@ sudo docker-compose stop phpldapadmin
 docker exec -it arkid-ldap bash
 cat /etc/openldap/slapd.conf
 
-docker-compose logs -f
+sudo docker-compose logs -f
 
 http://49.232.6.131:8989/
 admin
