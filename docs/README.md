@@ -18,4 +18,7 @@ admin
 http://49.232.6.131:8075/
 cn=admin,dc=example,dc=org
 admin
+
+https://oneid1.docs.apiary.io/
+https://arkid.cc/
 ```
