@@ -7,9 +7,9 @@ sudo docker-compose up -d phpldapadmin
 sudo docker-compose stop phpldapadmin
 
 sudo docker exec -it arkid-ldap bash
-sudo docker exec -it arkid-be bash
 cat /etc/openldap/slapd.conf
 
+sudo docker exec -it arkid-be bash
 pip3 install supervisor
 
 sudo docker-compose logs -f
