@@ -43,3 +43,19 @@ arkid-be        | /var/arkid/docker-entrypoint.sh: line 13: exec: supervisord: n
 arkid-be        | ++ id -u
 arkid-be        | + '[' supervisord = tini -a 0 = 0 ']'
 arkid-be        | + exec supervisord
+
+
+ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  4 06:09 ?        00:00:00 /usr/local/bin/python /usr/local/bin/supervisord
+root           9       0  0 06:09 pts/0    00:00:00 bash
+root          15       1 37 06:09 ?        00:00:01 /usr/local/bin/python3.8 manage.py runserver 0.0.0.0:80
+root          16       1 84 06:09 ?        00:00:02 /usr/local/bin/python /usr/local/bin/celery -A tasks.celery beat -l debug
+root          17       1 99 06:09 ?        00:00:03 /usr/local/bin/python /usr/local/bin/celery -A tasks.celery worker -l debug
+root         294      15 89 06:09 ?        00:00:01 /usr/local/bin/python3.8 manage.py runserver 0.0.0.0:80
+root         388      17  0 06:09 ?        00:00:00 /usr/local/bin/python /usr/local/bin/celery -A tasks.celery worker -l debug
+root         389      17  0 06:09 ?        00:00:00 /usr/local/bin/python /usr/local/bin/celery -A tasks.celery worker -l debug
+root         390      17  0 06:09 ?        00:00:00 /usr/local/bin/python /usr/local/bin/celery -A tasks.celery worker -l debug
+root         391      17  0 06:09 ?        00:00:00 /usr/local/bin/python /usr/local/bin/celery -A tasks.celery worker -l debug
+root         392      17  0 06:09 ?        00:00:00 /usr/local/bin/python /usr/local/bin/celery -A tasks.celery worker -l debug
+root         393       9  0 06:09 pts/0    00:00:00 ps -ef
