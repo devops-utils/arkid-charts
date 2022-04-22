@@ -82,7 +82,7 @@ services:
 
   phpldapadmin:
     image: osixia/phpldapadmin:latest
-    container_name: phpldapadmin
+    container_name: ${INSTANCE}-phpldapadmin
     environment:
       PHPLDAPADMIN_LDAP_HOSTS: "ldap"
       PHPLDAPADMIN_HTTPS: "false"
