@@ -1,6 +1,9 @@
 ```shell
 sudo docker-compose build
 
+sudo docker-compose pull
+sudo docker pull longguikeji/arkid:v2dev
+
 sudo docker-compose up -d
 sudo docker-compose down
 
